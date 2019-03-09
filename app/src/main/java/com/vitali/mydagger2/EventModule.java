@@ -1,13 +1,20 @@
 package com.vitali.mydagger2;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 import dagger.Module;
 import dagger.Provides;
-import dagger.multibindings.IntoSet;
+import dagger.multibindings.ElementsIntoSet;
 
 @Module
 public class EventModule {
 
-    @Provides
+
+    //IntoSet
+    //--------
+    /*@Provides
     @IntoSet
     EventHandler provideAnalyticsManager(){
         return new AnalyticsManager();
@@ -17,5 +24,14 @@ public class EventModule {
     @IntoSet
     EventHandler provideMyLogger(){
         return new MyLogger();
+    }*/
+
+
+    //ElementsIntoSet
+    //--------
+    @Provides
+    @ElementsIntoSet
+    Set<EventHandler> provideEventHandlers(){
+        return new HashSet<>(Arrays.asList(new AnalyticsManager(), new MyLogger()));
     }
 }
