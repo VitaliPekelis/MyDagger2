@@ -2,7 +2,7 @@ package com.vitali.mydagger2;
 
 import dagger.Component;
 
-@Component(modules = {NetworkModule.class, StorageModule.class})
+@Component(modules = {NetworkModule.class, StorageModule.class, EventModule.class})
 public interface AppComponent {
 
         /*GetMethods*/

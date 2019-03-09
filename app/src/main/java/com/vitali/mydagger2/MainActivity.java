@@ -2,6 +2,8 @@ package com.vitali.mydagger2;
 
 import android.os.Bundle;
 
+import java.util.Set;
+
 import javax.inject.Inject;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
 
     @Inject NetworkUtils networkUtils;
     @Inject SomePreferences preferences;
+
+    //IntoSet
+    @Inject
+    Set<EventHandler> eventsHandlers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
