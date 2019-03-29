@@ -1,5 +1,7 @@
 package com.vitali.mydagger2;
 
+import javax.inject.Singleton;
+
 import dagger.Module;
 import dagger.Provides;
 
@@ -25,12 +27,14 @@ public class StorageModule {
 
     //QUALIFIER
 
+    @Singleton
     @AppConstants.DatabaseProd
     @Provides
     DatabaseHelper provideDatabaseHelper(){
         return new DatabaseHelper("app.db");
     }
 
+    @Singleton
     @AppConstants.DatabaseTest
     @Provides
     DatabaseHelper provideDatabaseHelperTest(){

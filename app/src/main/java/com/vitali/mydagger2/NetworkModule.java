@@ -1,11 +1,14 @@
 package com.vitali.mydagger2;
 
+import javax.inject.Singleton;
+
 import dagger.Module;
 import dagger.Provides;
 
 @Module
 public class NetworkModule {
 
+    @Singleton
     @Provides
     NetworkUtils provideNetworkUtils(HttpClient httpClient) {
         return new NetworkUtils(httpClient);
@@ -14,5 +17,7 @@ public class NetworkModule {
     @Provides
     HttpClient provideHttpClient() { return new HttpClient(); }
 
-    @Provides SomePreferences provideSomePreferences() { return new SomePreferences(); }
+    @Singleton
+    @Provides
+    SomePreferences provideSomePreferences() { return new SomePreferences(); }
 }
