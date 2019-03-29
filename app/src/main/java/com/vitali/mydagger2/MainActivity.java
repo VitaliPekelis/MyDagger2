@@ -1,7 +1,10 @@
 package com.vitali.mydagger2;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.HandlerThread;
 
+import java.util.Map;
 import java.util.Set;
 
 import javax.inject.Inject;
@@ -37,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
     //IntoSet
     @Inject
     Set<EventHandler> eventsHandlers;
+
+    @Inject
+    Map</*String*/ThreadModule.ThreadHandlerKey, HandlerThread> threadHandlerMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
