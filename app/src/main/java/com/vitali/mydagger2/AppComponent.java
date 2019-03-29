@@ -13,5 +13,7 @@ public interface AppComponent {
     void injectMainActivity(MainActivity mainActivity);
 
 
+    //subComponent
+    MailComponent createMailComponent(MailModule mailModule);
 
 }

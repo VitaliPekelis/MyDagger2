@@ -55,7 +55,10 @@ public class MainActivity extends AppCompatActivity {
         /*InjectMethods*/
         App.getComponent().injectMainActivity(this);
 
-        setContentView(R.layout.activity_main);
+        //setContentView(R.layout.activity_main);
+        startActivity(new Intent(this,SecondActivity.class));
+
+        setTitle(MainActivity.class.getSimpleName());
 
     }
 }
