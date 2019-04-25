@@ -1,4 +1,8 @@
-package com.vitali.mydagger2;
+package com.vitali.mydagger2.dagger.models;
+
+import com.vitali.mydagger2.AnalyticsManager;
+import com.vitali.mydagger2.EventHandler;
+import com.vitali.mydagger2.MyLogger;
 
 import java.util.Arrays;
 import java.util.HashSet;

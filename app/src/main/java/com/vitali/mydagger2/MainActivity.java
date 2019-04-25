@@ -4,12 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.HandlerThread;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.vitali.mydagger2.dagger.models.ThreadModule;
+
 import java.util.Map;
 import java.util.Set;
 
 import javax.inject.Inject;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -47,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle(MainActivity.class.getSimpleName());
 
         /*GetMethods*/
 //        databaseHelper = App.getComponent().getDatabaseHelper();
@@ -57,8 +60,6 @@ public class MainActivity extends AppCompatActivity {
 
         //setContentView(R.layout.activity_main);
         startActivity(new Intent(this,SecondActivity.class));
-
-        setTitle(MainActivity.class.getSimpleName());
 
     }
 }

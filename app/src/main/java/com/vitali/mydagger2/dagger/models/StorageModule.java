@@ -1,4 +1,7 @@
-package com.vitali.mydagger2;
+package com.vitali.mydagger2.dagger.models;
+
+import com.vitali.mydagger2.AppConstants;
+import com.vitali.mydagger2.DatabaseHelper;
 
 import javax.inject.Singleton;
 

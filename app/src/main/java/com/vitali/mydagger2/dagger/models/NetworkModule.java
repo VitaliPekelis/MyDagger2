@@ -1,4 +1,8 @@
-package com.vitali.mydagger2;
+package com.vitali.mydagger2.dagger.models;
+
+import com.vitali.mydagger2.HttpClient;
+import com.vitali.mydagger2.NetworkUtils;
+import com.vitali.mydagger2.SomePreferences;
 
 import javax.inject.Singleton;
 

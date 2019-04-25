@@ -2,6 +2,9 @@ package com.vitali.mydagger2;
 
 import android.app.Application;
 
+import com.vitali.mydagger2.dagger.AppComponent;
+import com.vitali.mydagger2.dagger.DaggerAppComponent;
+import com.vitali.mydagger2.dagger.MailComponent;
 import com.vitali.mydagger2.scope.Account;
 import com.vitali.mydagger2.scope.MailModule;
 

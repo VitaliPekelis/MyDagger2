@@ -1,4 +1,4 @@
-package com.vitali.mydagger2;
+package com.vitali.mydagger2.dagger.models;
 
 import android.os.HandlerThread;
 
@@ -28,7 +28,7 @@ public class ThreadModule {
         return new HandlerThread("DB");
     }
 
-    enum ThreadHandlerKey{
+    public enum ThreadHandlerKey{
         UI,DB
     }
 

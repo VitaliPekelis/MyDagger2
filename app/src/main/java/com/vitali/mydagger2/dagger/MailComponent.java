@@ -1,4 +1,4 @@
-package com.vitali.mydagger2;
+package com.vitali.mydagger2.dagger;
 
 import com.vitali.mydagger2.scope.FolderListActivityComponent;
 import com.vitali.mydagger2.scope.LetterListActivityComponent;

@@ -1,5 +1,5 @@
 package com.vitali.mydagger2;
 
-class HttpClient {
+public class HttpClient {
 
 }

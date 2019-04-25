@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MyDagger2</string>
+    <string name="open_scope_example">Open Scope Example</string>
 </resources>
