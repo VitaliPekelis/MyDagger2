@@ -20,4 +20,15 @@ public class NetworkUtils {
         }
         return new UserData();
     }
+
+    public String getUserDataJson(User user) {
+
+        AndroidLogger.logDebug();
+        try {
+            Thread.sleep(DateUtils.SECOND_IN_MILLIS * 3);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
 }

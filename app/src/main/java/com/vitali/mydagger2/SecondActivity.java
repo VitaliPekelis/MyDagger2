@@ -50,17 +50,24 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public void onSuccess(@NullableDecl UserData result) {
                 AndroidLogger.logDebug();
-                runOnUiThread(() -> Toast.makeText(SecondActivity.this, "onSuccess", Toast.LENGTH_SHORT).show());
+                runOnUiThread(() -> {
+                    Toast.makeText(SecondActivity.this, "onSuccess", Toast.LENGTH_SHORT).show();
+                    AndroidLogger.logDebug();
+                });
 
             }
 
             @Override
             public void onFailure(Throwable t) {
                 AndroidLogger.logDebug();
-                runOnUiThread(() -> Toast.makeText(SecondActivity.this, "onFailure", Toast.LENGTH_SHORT).show());
+                runOnUiThread(() -> {
+                    Toast.makeText(SecondActivity.this, "onFailure", Toast.LENGTH_SHORT).show();
+                    AndroidLogger.logDebug();
+                });
 
             }
         }, MoreExecutors.directExecutor());
+        
     }
 
     public void openScopeExample(View view) {
