@@ -12,6 +12,7 @@ import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.MoreExecutors;
+import com.vitali.mydagger2.castombuilders.BuildersActivity;
 import com.vitali.mydagger2.dagger.DaggerUserComponent;
 import com.vitali.mydagger2.dagger.UserComponent;
 import com.vitali.mydagger2.dagger.asyncmodels.UserDataModule;
@@ -69,6 +70,11 @@ public class SecondActivity extends AppCompatActivity {
         }, MoreExecutors.directExecutor());
         
     }
+
+    public void toThirdActivity(View view) {
+        startActivity(new Intent(this, BuildersActivity.class));
+    }
+
 
     public void openScopeExample(View view) {
         startActivity(new Intent(this, LoginActivity.class));
