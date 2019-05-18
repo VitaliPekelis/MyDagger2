@@ -22,7 +22,7 @@ public class BuildersActivity extends AppCompatActivity {
 
     private void inject() {
         BuildersExampleComponent component =  DaggerBuildersExampleComponent.builder()
-                .someModule(new SomeModule(new SomeObject()))
-                .build();
+                .methodForSettingSomeModule(new SomeModule(new SomeObject()))
+                .createComponent();
     }
 }
