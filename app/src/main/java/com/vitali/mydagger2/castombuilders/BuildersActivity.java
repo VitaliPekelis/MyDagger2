@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.vitali.mydagger2.R;
 import com.vitali.mydagger2.castombuilders.dagger.BuildersExampleComponent;
 import com.vitali.mydagger2.castombuilders.dagger.DaggerBuildersExampleComponent;
-import com.vitali.mydagger2.castombuilders.dagger.SomeModule;
 
 public class BuildersActivity extends AppCompatActivity {
 
@@ -22,7 +21,7 @@ public class BuildersActivity extends AppCompatActivity {
 
     private void inject() {
         BuildersExampleComponent component =  DaggerBuildersExampleComponent.builder()
-                .methodForSettingSomeModule(new SomeModule(new SomeObject()))
+                .methodForSettingSomeModule(new SomeObject())
                 .createComponent();
     }
 }

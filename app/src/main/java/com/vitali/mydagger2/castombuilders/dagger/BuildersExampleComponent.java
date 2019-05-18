@@ -2,6 +2,7 @@ package com.vitali.mydagger2.castombuilders.dagger;
 
 import com.vitali.mydagger2.castombuilders.SomeObject;
 
+import dagger.BindsInstance;
 import dagger.Component;
 
 @Component(modules = {SomeModule.class})
@@ -12,7 +13,9 @@ public interface BuildersExampleComponent {
     @Component.Builder
     interface MyBuilder{
          BuildersExampleComponent createComponent();
-         MyBuilder methodForSettingSomeModule(SomeModule someModule);
+
+         @BindsInstance
+         MyBuilder methodForSettingSomeModule(/*SomeModule someModule*/SomeObject someObject);
 
     }
 }
