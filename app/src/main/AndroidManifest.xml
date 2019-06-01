@@ -10,7 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".castombuilders.BuildersActivity"/>
+        <activity android:name=".androidInjectionLesson.AndroidInjectionLessonSecondActivity"></activity>
+        <activity android:name=".androidInjectionLesson.AndroidInjectionLessonFirstActivity" />
+        <activity android:name=".castombuilders.BuildersActivity" />
         <activity android:name=".scope.LetterListActivity" />
         <activity android:name=".scope.FolderListActivity" />
         <activity android:name=".scope.LoginActivity" />

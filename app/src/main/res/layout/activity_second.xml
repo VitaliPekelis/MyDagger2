@@ -28,10 +28,24 @@
         android:layout_marginEnd="8dp"
         android:backgroundTint="#FFEB3B"
         android:onClick="toThirdActivity"
-        android:text="Lesson Builder "
+        android:text="@string/lesson_builder"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/android_injecttion_lesson_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#64DD17"
+        android:onClick="toAndroidInjectionLessonActivity"
+        android:text="@string/android_injection_lesson"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

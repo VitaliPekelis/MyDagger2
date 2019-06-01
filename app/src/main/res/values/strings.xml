@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">MyDagger2</string>
     <string name="open_scope_example">Open Scope Example</string>
+    <string name="lesson_builder">Lesson Builder</string>
+    <string name="android_injection_lesson">Android Injection Lesson</string>
 </resources>

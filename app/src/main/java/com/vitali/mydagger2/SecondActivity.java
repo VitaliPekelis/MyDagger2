@@ -12,6 +12,7 @@ import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.MoreExecutors;
+import com.vitali.mydagger2.androidInjectionLesson.AndroidInjectionLessonFirstActivity;
 import com.vitali.mydagger2.castombuilders.BuildersActivity;
 import com.vitali.mydagger2.dagger.DaggerUserComponent;
 import com.vitali.mydagger2.dagger.UserComponent;
@@ -78,5 +79,11 @@ public class SecondActivity extends AppCompatActivity {
 
     public void openScopeExample(View view) {
         startActivity(new Intent(this, LoginActivity.class));
+    }
+
+    public void toAndroidInjectionLessonActivity(View view) {
+        startActivity(
+                new Intent(this,
+                        AndroidInjectionLessonFirstActivity.class));
     }
 }

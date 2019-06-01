@@ -1,5 +1,6 @@
 package com.vitali.mydagger2;
 
+import android.app.Activity;
 import android.app.Application;
 
 import com.vitali.mydagger2.dagger.AppComponent;
@@ -8,11 +9,20 @@ import com.vitali.mydagger2.dagger.MailComponent;
 import com.vitali.mydagger2.scope.Account;
 import com.vitali.mydagger2.scope.MailModule;
 
-public class App extends Application {
+import javax.inject.Inject;
+
+import dagger.android.AndroidInjector;
+import dagger.android.DispatchingAndroidInjector;
+import dagger.android.HasActivityInjector;
+
+public class App extends Application implements HasActivityInjector {
 
     private static AppComponent component;
     private static App instance;
     private MailComponent mailComponent;
+
+    @Inject
+    DispatchingAndroidInjector<Activity> activityDispatchingAndroidInjector;
 
 
     @Override
@@ -20,6 +30,7 @@ public class App extends Application {
         super.onCreate();
         instance = this;
         component = DaggerAppComponent.create();
+        component.injectApp(this);
     }
 
     public static App getInstance() {
@@ -46,4 +57,9 @@ public class App extends Application {
         mailComponent = null;
     }
 
+
+    @Override
+    public AndroidInjector<Activity> activityInjector() {
+        return activityDispatchingAndroidInjector;
+    }
 }
